@@ -8,8 +8,8 @@
   border-top: 1px solid #e5e7eb;
   font-family: 'Inter', sans-serif;
   flex-wrap: wrap;
+  margin-top: 12px;
 }
-
 
 .text {
   font-size: 1rem;
