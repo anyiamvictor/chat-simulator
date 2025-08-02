@@ -1,14 +1,11 @@
-.wrapperOne{
-margin:10px;
-}
-
+/* ChatSimulator.module.css */
 
 .wrapper {
   display: flex;
-  height: 100vh;
-  width:100;
-    margin-bottom: 5rem;
-
+  flex-direction: row;
+  min-height: 100vh; /* changed from height: 100vh */
+  width: 100%;
+  margin-bottom: 5rem;
 }
 
 .leftPanel {
@@ -23,25 +20,23 @@ margin:10px;
 /* Responsive adjustments */
 @media (max-width: 768px) {
   .wrapper {
-    /* flex-direction: column; */
-     flex-direction: column-reverse;
-     height:fit-content;
-     margin:0;
-     gap:0
-
+    flex-direction: column-reverse;
+    min-height: unset; /* Let it grow with content */
+    margin: 0;
+    gap: 0;
   }
 
   .leftPanel {
     width: 100%;
-    height: 40vh; 
+    height: auto; /* Let it grow with content */
     border-right: none;
     border-bottom: 1px solid #e5e7eb;
     margin-bottom: 5rem;
-    
   }
 
   .rightPanel {
     width: 100%;
-    height: 40vh;
+    height: 40vh; /* keep height here if ChatArea should remain fixed height */
+    overflow-y: auto;
   }
 }

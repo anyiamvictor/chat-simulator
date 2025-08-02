@@ -3,7 +3,8 @@
 .layoutWrapper {
   display: flex;
   flex-direction: column;
-  height: 100vh;
+  min-height: 100vh;
+  overflow: auto;
 }
 
 .mainContent {
@@ -14,5 +15,7 @@
 @media (max-width: 764px) {
   .mainContent {
     margin:0;
+    margin-bottom: auto;
+
   }
 }
