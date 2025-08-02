@@ -1,5 +1,8 @@
 /* ChatSimulator.module.css */
+.wrapperOne{
+  margin:10px;
 
+}
 .wrapper {
   display: flex;
   flex-direction: row;
