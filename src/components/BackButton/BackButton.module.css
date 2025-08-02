@@ -1,0 +1,26 @@
+/* components/BackButton/BackButton.module.css */
+.backButton {
+  background-color: #194da5;
+  color: #ece8e8;
+ padding: 0.6rem 1.2rem;
+  font-size: 1rem;
+  border-radius: 6px;
+  border: none;
+  cursor: pointer;
+  font-weight: 500;
+  
+
+  
+}
+
+.backButton:hover {
+  background-color: #194ca570;
+}
+
+@media (max-width: 768px) {
+
+.backButton{
+ font-size: 0.95rem;
+  padding: 0.55rem .2rem;}
+
+}

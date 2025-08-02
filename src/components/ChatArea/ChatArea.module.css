@@ -1,0 +1,161 @@
+.chatWrapper.light {
+  /* Base Colors */
+  --background: #e5ddd5;
+  --text-color: #111;
+
+  /* Bubble Colors */
+  --you-bg: #dcf8c6; /* WhatsApp green */
+  --you-color: #111;
+  --you-tail: #dcf8c6;
+
+  --them-bg: #ffffff;
+  --them-color: #111;
+  --them-tail: #ffffff;
+
+  /* Meta and Sender */
+  --sender-color: #444;
+  --meta-opacity: 0.6;
+  --timestamp-color: #888;
+
+  /* UI Details */
+  --notch: #ccc;
+  --border-color: #ccc;
+  --typing-bg: #f0f0f0;
+  --box-shadow: 0 1px 4px rgba(0, 0, 0, 0.15);
+}
+
+.chatWrapper.dark {
+  /* Base Colors */
+  --background: #0b141a; /* WhatsApp chat background */
+  --text-color: #e9edef;
+
+  /* Bubble Colors */
+  --you-bg: #056162;         /* WhatsApp greenish-teal */
+  --you-color: #e9edef;
+  --you-tail: #056162;
+
+  --them-bg: #363c3f;        /* WhatsApp dark gray */
+  --them-color: #e9edef;
+  --them-tail: #363c3f;
+
+  /* Meta and Sender */
+  --sender-color: #b1b3b5;
+  --meta-opacity: 0.6;
+  --timestamp-color: #8696a0;
+
+  /* UI Details */
+  --notch: #444;
+  --border-color: #333;
+  --typing-bg: #1f2c33;
+  --box-shadow: 0 1px 3px rgba(0, 0, 0, 0.5);
+}
+
+
+
+
+
+.chatWrapper {
+  display: flex;
+  flex-direction: column;
+  background-color: var(--background);
+  color: var(--text-color);
+  border-radius: 24px;
+  border: 4px solid var(--border-color);
+  width: 290px;
+  height: 65vh;
+  margin: 15vh auto;
+  box-shadow: var(--box-shadow);
+  position: relative;
+  overflow: auto;
+}
+
+
+
+.chatWrapper {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+.chatWrapper::-webkit-scrollbar {
+  display: none;
+}
+
+.chatArea {
+  display: flex;
+  flex-direction: column;
+}
+
+.p::before {
+  content: '';
+  display: block;
+  width: 60px;
+  height: 6px;
+  background: var(--notch);
+  border-radius: 3px;
+  margin: 8px auto 0;
+  opacity: 0.6;
+  z-index: 2000;
+}
+
+.messagesList {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  margin-top: 8px;
+  overflow-y: auto;
+  scrollbar-width: none;
+}
+.messagesList::-webkit-scrollbar {
+  display: none;
+}
+
+.timestamp {
+  font-size: 0.7rem;
+  color: var(--timestamp-color);
+  position: absolute;
+  bottom: 4px;
+  right: 10px;
+}
+
+.typingIndicator {
+  display: flex;
+  align-items: center;
+  max-width: fit-content;
+  padding: 6px 10px;
+  border-radius: 16px;
+  font-style: italic;
+  font-size: 0.85rem;
+  animation: pulse 1.2s infinite;
+  margin: 4px 0 6px;
+  /* background-color: var(--typing-bg); */
+  color: var(--text-color);
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.typingUser {
+  align-self: flex-end;
+  border-bottom-right-radius: 0;
+}
+
+.typingOther {
+  align-self: flex-start;
+  border-bottom-left-radius: 0;
+}
+
+.typingDots {
+  margin-left: 4px;
+  animation: blink 1s infinite;
+}
+
+@keyframes blink {
+  0% { opacity: 0.2; }
+  50% { opacity: 1; }
+  100% { opacity: 0.2; }
+}
+
+@keyframes pulse {
+  0% { opacity: 0.2; }
+  50% { opacity: 1; }
+  100% { opacity: 0.2; }
+}
+
+

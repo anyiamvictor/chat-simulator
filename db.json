@@ -1,0 +1,18 @@
+{
+  "users": [
+    {
+      "id": "user-1753868229706",
+      "name": "bixtor",
+      "email": "a@a.com",
+      "password": "aaaaaa"
+    }
+  ],
+  "participants": [
+    {
+      "id": "user-1753868229706",
+      "name": "bixtor",
+      "user_id": "user-1753868229706",
+      "photo": "https://robohash.org/user-1753868229706?set=set3"
+    }
+  ]
+}

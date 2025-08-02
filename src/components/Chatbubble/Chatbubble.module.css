@@ -1,0 +1,116 @@
+
+
+/* Bubble Alignment */
+.bubbleRight {
+  display: flex;
+  flex-direction: row-reverse;
+  align-items: flex-end;
+  gap: 0.4rem;
+  margin-bottom: 0.5rem;
+
+}
+
+.bubbleLeft {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-end;
+  gap: 0.4rem;
+  margin-bottom: 0.5rem;
+
+}
+
+/* Profile Image */
+.dp {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  object-fit: cover;
+  flex-shrink: 0;
+    margin: 0 0.3rem;
+}
+
+/* Main Bubble */
+.bubble {
+  position: relative;
+  padding: 10px 16px;
+  font-size: 0.85rem;
+  width: 135px;
+  word-wrap: break-word;
+  line-height: 1.3;
+  border-radius: 30px;
+  background-color: var(--you-bg); /* or them-bg depending */
+  color: var(--you-color);
+  text-align: justify;
+
+  box-shadow:
+    0 3px 8px rgba(0, 0, 0, 0.25),     /* deep drop shadow */
+    inset 0 1px 2px rgba(255, 255, 255, 0.6), /* glossy top highlight */
+    inset 0 -2px 4px rgba(0, 0, 0, 0.1);      /* shadow on bottom edge */
+
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* YOU: Right side bubble */
+.you {
+  background-color: var(--you-bg);
+  color: var(--you-color);
+  border-radius: 30px 10px 30px 30px; 
+}
+
+.them {
+    background-color: var(--them-bg);
+  color: var(--them-color);
+  border-radius: 10px 30px 30px 30px;
+
+}
+
+.you::after {
+  border-left: 8px solid var(--you-tail);
+  right: -8px;
+
+}
+
+
+
+.them::after {
+  left: -8px;
+  border-right: 8px solid var(--them-tail);
+}
+
+.you::after,
+.them::after {
+   content: "";
+  position: absolute;
+  top: 10px;
+  width: 0;
+  height: 0;
+  border-top: 8px solid transparent;
+  border-bottom: 8px solid transparent;
+
+}
+
+
+.sender {
+  font-size: 0.6rem;
+  font-weight: 500;
+  margin-bottom: 4px;
+  margin-left: 8px;
+  color: var(--sender-color);
+}
+
+.meta {
+  font-size: 0.6rem;
+  text-align: right;
+  margin-top: 4px;
+  opacity: var(--meta-opacity);
+}
+
+
+/* Margin between bubbles */
+.bubbleLeft,
+.bubbleRight {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.4rem;
+  margin-bottom: 0.5rem;
+}

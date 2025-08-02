@@ -1,0 +1,18 @@
+/* RootLayout.module.css */
+
+.layoutWrapper {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+}
+
+.mainContent {
+  flex: 1;
+}
+
+/* Mobile specific adjustments */
+@media (max-width: 764px) {
+  .mainContent {
+    margin:0;
+  }
+}

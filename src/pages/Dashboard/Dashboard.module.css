@@ -1,0 +1,521 @@
+/* Dashboard.module.css – Responsive and Polished */
+
+.dashboard {
+  max-width: 1200px;
+  margin: 2rem auto;
+  padding: 2rem;
+  background: #f0f2f5;
+  border-radius: 16px;
+  font-family: 'Inter', sans-serif;
+  box-shadow: 0 15px 25px rgba(0, 0, 0, 0.05);
+}
+
+.title {
+  text-align: center;
+  font-size: 2rem;
+  font-weight: 700;
+  color: #222;
+  margin-bottom: 1rem;
+}
+
+.content {
+  display: flex;
+  gap: 2rem;
+  margin-top: 2rem;
+  max-width: 1300px;
+  padding: 1rem;
+  box-sizing: border-box;
+}
+
+.sectionWrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  flex: 0 0 30%; /* fixed 30% of the row */
+}
+
+
+.listSection {
+  flex: 1;
+  background-color: #fff;
+  padding: 1rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+
+.sideSection {
+  background-color: #fff;
+  padding: 1rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  height: fit-content;
+}
+
+.actionContainer {
+  display: flex;
+  gap: 1rem;
+  margin-top: 1rem;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.resetButton,
+.logoutButton,
+.deleteButton,
+.confirmButton,
+.cancelButton {
+  padding: 0.6rem 1.2rem;
+  font-size: 1rem;
+  border-radius: 6px;
+  border: none;
+  cursor: pointer;
+  font-weight: 500;
+}
+
+.resetButton {
+  background-color: red;
+  color: white;
+}
+
+.logoutButton {
+  background-color: #d9534f;
+  color: white;
+}
+
+.deleteButton,
+.confirmButton {
+  background-color: #dc2626;
+  color: white;
+}
+
+.cancelButton {
+  background-color: #e5e7eb;
+  color: #111827;
+}
+
+.formSection,
+.listSection {
+  background: #ffffff;
+  border-radius: 16px;
+  padding: 2rem;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.04);
+  transition: box-shadow 0.3s ease;
+}
+
+.formSection:hover,
+.listSection:hover {
+  box-shadow: 0 10px 24px rgba(0, 0, 0, 0.06);
+}
+
+
+
+h3 {
+  font-size: 1.25rem;
+  margin-bottom: 1rem;
+  color: #444;
+  padding: 12px;;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.input {
+  padding: 0.75rem 1rem;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  font-size: 1rem;
+  transition: border-color 0.3s, box-shadow 0.2s;
+}
+
+.input:focus {
+  border-color: #007bff;
+  box-shadow: 0 0 0 2px rgba(0, 123, 255, 0.1);
+  outline: none;
+}
+
+.uploadButton {
+  display: inline-block;
+  padding: 0.6rem 1.2rem;
+  background-color: #4caf50;
+  color: white;
+  font-size: 0.95rem;
+  font-weight: 500;
+  border: none;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  text-align: center;
+  text-decoration: none;
+}
+
+.uploadButton:hover {
+  background-color: #45a049;
+}
+
+.uploadButton:active {
+  transform: scale(0.98);
+}
+
+.button {
+  background-color: #007bff;
+  color: #fff;
+  padding: 0.75rem 1.2rem;
+  font-size: 1rem;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  font-weight: 500;
+  transition: background-color 0.25s ease;
+}
+
+.button:hover {
+  background-color: #0056b3;
+}
+
+.button:disabled {
+  background-color: #c0c0c0;
+  cursor: not-allowed;
+}
+
+.error {
+  color: #d9534f;
+  font-size: 0.9rem;
+  margin-top: 0.5rem;
+}
+
+.empty {
+  font-style: italic;
+  color: #999;
+}
+
+.list {
+  margin-top: 1rem;
+  list-style: none;
+  padding: 0;
+  max-height: 400px;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  scrollbar-width: thin;
+  scrollbar-color: #ccc transparent;
+}
+
+.list::-webkit-scrollbar {
+  width: 6px;
+}
+
+.list::-webkit-scrollbar-thumb {
+  background-color: #ccc;
+  border-radius: 8px;
+}
+
+.participantItem {
+  background: #f9f9f9;
+  padding: 1rem;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  margin:20px;
+  transition: box-shadow 0.2s ease;
+  border:1px solid rgba(0, 55, 255, 0.264)
+}
+
+.participantItem:hover {
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.05);
+}
+
+.participantLabel {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex: 1;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.currentUserLabel {
+  font-weight: normal;
+  font-size: 0.85em;
+  color: #888;
+  margin-left: 4px;
+}
+
+
+.avatar {
+  width: 45px;
+  height: 45px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 2px solid #ddd;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.avatar:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 0 2px #007bff44;
+}
+
+.participantName {
+  font-weight: 600;
+  font-size: 1rem;
+  color: #333;
+}
+
+.editButton,
+.removeButton,
+.saveButton,
+.cancelButton {
+  background: none;
+  border: none;
+  padding: 0.5rem;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: color 0.2s;
+}
+
+.editButton:hover {
+  color: #007bff;
+}
+
+.edit{
+  margin-left: auto;
+  justify-content: space-around;
+
+}
+.edit *{
+  border: 1px solid rgba(103, 103, 103, 0.123);
+  margin:10px;
+
+
+}
+
+.removeButton {
+  color: red;
+  background: transparent;
+  font-size: 1.1rem;
+}
+
+.removeButton:hover {
+  color: #d9534f;
+}
+
+.saveButton {
+  color: #28a745;
+}
+
+.saveButton:hover {
+  color: #218838;
+}
+
+.cancelButton {
+  color: #888;
+}
+
+.cancelButton:hover {
+  color: #444;
+}
+
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+}
+
+.modal {
+  background: white;
+  padding: 2rem;
+  border-radius: 8px;
+  max-width: 400px;
+  width: 90%;
+  text-align: center;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+}
+
+.modalText {
+  margin-bottom: 1rem;
+  font-size: 1rem;
+}
+
+.buttonGroup {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.welcomeName {
+  color: #007bff;
+  font-weight: bold;
+  text-transform: capitalize;
+}
+
+@media (max-width: 768px) {
+
+
+    .actionContainer {
+            display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 0.75rem;
+  margin-top: 1.5rem;
+  align-items: stretch;
+  }
+
+  .resetButton,
+  .logoutButton,
+  .deleteButton,
+  .confirmButton,
+  .cancelButton {
+    font-size: 0.95rem;
+    padding: 0.55rem .2rem;
+    /* width: 90%; */
+  }
+
+
+  .content {
+    flex-direction: column;
+    gap: 1.5rem;
+    padding: 0.5rem;
+    min-width: 100%;
+  }
+
+  .sectionWrapper {
+    width: 100%;
+    flex: 1 1 100%;
+  }
+
+  .listSection {
+    width: 100%;
+    padding:0;
+    gap:0
+  }
+  
+
+  .dashboard {
+    padding: .5rem;
+    margin: 0;
+  }
+
+  .title {
+    font-size: 1.5rem;
+  }
+
+  .input,
+  .button,
+  .uploadButton {
+    font-size: 0.95rem;
+    padding: 0.6rem 1rem;
+  }
+
+  .buttonGroupEdit input{
+    width:90px;
+
+  }
+
+  .participantLabel {
+    /* align-items: flex-start; */
+  justify-content: space-around;
+  gap: 2px;
+
+
+  }
+
+  .currentUserLabel {
+  font-weight: normal;
+  font-size: 0.85em;
+  margin-left: 4px;
+}
+  .avatar {
+    width: 40px;
+    height: 40px;
+  }
+
+  .participantItem {
+    /* flex-direction: column; */
+    align-items: flex-start;
+  justify-content: space-around;
+    padding:9px;
+    margin:5px;
+    gap:1px;
+  }
+
+  .participantName{
+    font-size: 12px;
+    word-break: break-all;
+  }
+
+  .buttonGroup {
+    flex-direction: column;
+    gap: 0.75rem;
+  }
+
+  .modal {
+    padding: 1.5rem;
+    width: 95%;
+  }
+  .buttonGroupEdit{
+  /* margin-left: auto; */
+  display: flex;
+  width:120px;
+}
+}
+
+@media (max-width: 340px) {
+  
+  .buttonGroupEdit {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    width: 100%;
+    align-items: stretch;
+  }
+
+  .saveButton,
+  .cancelButton {
+    font-size: 0.9rem;
+    padding: 0.5rem;
+    width: 100%;
+    text-align: center;
+  }
+
+  .participantItem {
+    padding: 0;
+  }
+
+  .input {
+    font-size: 0.9rem;
+    padding: 0.5rem 0.75rem;
+  }
+
+  .avatar {
+    width: 35px;
+    height: 35px;
+  }
+
+  .title {
+    font-size: 1.2rem;
+  }
+
+  .edit * {
+    margin: 2px;
+  }
+}
